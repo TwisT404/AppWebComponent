@@ -3,21 +3,35 @@
 }
 
 body {
+  background-color: antiquewhite;
+  font-family: Roboto;
   box-sizing: border-box;
   margin: 0;
-
-  width: 100vw;
-  height: 100vh;
 }
 
-@keyframes fadeScreenIn {
-  100% {
-    width: 100vw;
-    height: 100vh;
+@keyframes fadeScreenFromLeftToRight {
+  0% {
+    transform: translateX(0vh);
   }
 
-  00% {
-    width: 0vw;
-    height: 0vh;
+  100% {
+    transform: translateX(100vw);
   }
+}
+
+@keyframes fadeScreenInFromRight {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(0vw);
+  }
+}
+
+::view-transition-old(root) {
+  animation: fadeScreenFromLeftToRight 1s ease-in-out both;
+}
+
+::view-transition-new(root) {
+  animation: fadeScreenInFromRight 1s ease-in-out both;
 }
