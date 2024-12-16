@@ -1,20 +1,11 @@
-/* CSS of the web Component  */
-index-view {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-items: center;
-}
-
-index-view > section {
+section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 45px;
 }
-
-index-view > section > p {
+section > p {
   width: 50%;
   min-width: 150px;
   text-align: justify;
