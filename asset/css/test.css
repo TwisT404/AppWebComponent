@@ -1,9 +1,4 @@
 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   gap: 30px;
 }
 
@@ -36,33 +31,7 @@ main {
 }
 
 a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 50px;
-  text-decoration: none;
-  color: black;
-  left: 0%;
-  bottom: 0;
-  border: 3px solid black;
-  border-radius: 15px;
-  position: relative;
   padding: 15px;
-}
-
-a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  top: 75%;
-  height: 2px;
-  background: black;
-  transition: width 500ms ease;
-}
-
-a:hover::after {
-  width: 70%;
 }
 
 html::view-transition-old(element-switch),
