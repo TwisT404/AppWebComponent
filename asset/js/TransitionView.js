@@ -18,7 +18,7 @@ customElements.define(
         </p>
         <baseline-status featureId="view-transitions"></baseline-status>
         <div class="container--btn">
-          <a href="./pages/Test.html" id="test">Démos</a>  
+          <a href="./pages/Demo.html" id="test">Démonstration</a>  
           <a href="./pages/Exemple.html">Exemple code</a>
         </div>
       </section>`;
