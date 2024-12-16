@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../asset/css/global.css" />
+    <link rel="stylesheet" href="./../asset/css/codeDemo.css" />
+    <title>App Web Component</title>
+  </head>
+  <body>
+    <main>
+      <h1>Code et autres exemples:</h1>
+      <section class="code">
+        <h2>Partie Code:</h2>
+        <div class="code__container">
+          <code-block
+            lang="CSS"
+            comment="Permettre la navigation entre les pages"
+            code="
+                  @view-transition {
+                    navigation: auto;
+                  }
+              "
+          >
+          </code-block>
+          <code-block
+            lang="CSS"
+            comment="L'animation lors d'un changement de page"
+            code="
+            ::view-transition-old(root),
+            ::view-transition-new(root) {
+              animation: 1s ease-in-out;
+            }
+              "
+          >
+          </code-block>
+          <code-block
+            lang="JS"
+            comment="Permet d'appliquer la transition sur un plus petit élément"
+            code="
+                document.startViewTransition(async () => {});
+              "
+          >
+          </code-block>
+        </div>
+      </section>
+      <section class="exemple">
+        <h2>D'autres exemples:</h2>
+        <div>
+          <a href="https://http203-playlist.netlify.app" class="linkExemple"
+            >HTTP203</a
+          >
+          <a href="https://codepen.io/seyedi/pen/YzRbExz" class="linkExemple"
+            >Difference without transition and with transition</a
+          >
+        </div>
+      </section>
+
+      <a href="./../index.html" id="back">Retour</a>
+    </main>
+
+    <script src="./../asset/js/Code/CodeBlock.js"></script>
+  </body>
+</html>

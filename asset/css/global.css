@@ -1,7 +1,12 @@
 @view-transition {
   navigation: auto;
 }
-
+/* For accesibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    view-transition-name: unset !important;
+  }
+}
 body {
   background-color: antiquewhite;
   font-family: Roboto;
