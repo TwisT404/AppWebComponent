@@ -2,7 +2,10 @@ customElements.define(
   "transition-demo",
   class extends HTMLElement {
     connectedCallback() {
+      //Initialize by calling render function
       this.render();
+
+      // Interaction on both elements to start view Transition API in async
       this.querySelector("#btnFirst").addEventListener("click", function () {
         document.startViewTransition(async () => {
           document.getElementById("first_container").style.display = "none";
