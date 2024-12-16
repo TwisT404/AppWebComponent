@@ -1,0 +1,72 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+
+.test {
+  display: flex;
+}
+
+.test__container {
+  background-color: rgb(255, 162, 0);
+  width: 250px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 15px;
+  view-transition-name: element-switch;
+}
+
+.second {
+  display: none;
+}
+
+.test__container > button {
+  border-radius: 15px;
+  width: 150px;
+  height: 50px;
+  background-color: rgba(229, 211, 211, 0.862);
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  text-decoration: none;
+  color: black;
+  left: 0%;
+  bottom: 0;
+  border: 3px solid black;
+  border-radius: 15px;
+  position: relative;
+  padding: 15px;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  top: 75%;
+  height: 2px;
+  background: black;
+  transition: width 500ms ease;
+}
+
+a:hover::after {
+  width: 70%;
+}
+
+html::view-transition-old(element-switch),
+html::view-transition-new(element-switch) {
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
